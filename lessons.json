@@ -1,4 +1,77 @@
 {
   "version": 1,
-  "lessons": []
+  "lessons": [
+    {
+      "lesson": "ccc/deriving-minimum-cell-capacity-with-ccc-celloutput-from-and",
+      "test": "tests/ccc/minimum-capacity.test.mjs",
+      "library": "@ckb-ccc/core",
+      "covers": "all"
+    },
+    {
+      "lesson": "ccc/hand-rolled-script-hash-hash-type-byte-mapping-and-molecule",
+      "test": "tests/ccc/script-hash.test.mjs",
+      "library": "@ckb-ccc/core",
+      "covers": "all"
+    },
+    {
+      "lesson": "ccc/parsing-snake-case-json-rpc-transactions-in-ccc",
+      "test": "tests/ccc/snake-case-transaction.test.mjs",
+      "library": "@ckb-ccc/core",
+      "covers": "all"
+    },
+    {
+      "lesson": "ccc/use-jsonrpctransformers-transactionfrom-to-serialize-ccc-tra",
+      "test": "tests/ccc/serialize-for-rpc.test.mjs",
+      "library": "@ckb-ccc/core",
+      "covers": "all"
+    },
+    {
+      "lesson": "ccc/convert-fiber-rpc-snake-case-scripts-to-ccc-camelcase-script",
+      "test": "tests/ccc/fiber-snake-case-script.test.mjs",
+      "library": "@ckb-ccc/core",
+      "covers": "all"
+    },
+    {
+      "lesson": "ccc/transaction-size-for-fee-rate-is-serialized-bytes-plus-4",
+      "test": "tests/ccc/transaction-size.test.mjs",
+      "library": "@ckb-ccc/core",
+      "covers": "part: the size rule as CCC applies it, not the node count nor weight by cycles"
+    },
+    {
+      "lesson": "ccc/pass-a-config-object-not-a-url-string-to-ccc-clientpublictes",
+      "test": "tests/ccc/client-config-object.test.mjs",
+      "library": "@ckb-ccc/core",
+      "covers": "all"
+    },
+    {
+      "lesson": "ccc/completefeeby-adds-change-instead-of-shrinking-outputs-break",
+      "test": "tests/ccc/complete-fee-by-adds-change.test.mjs",
+      "library": "@ckb-ccc/core",
+      "covers": "part: what completeFeeBy does to the transaction, not the lock that commits to output 0"
+    },
+    {
+      "lesson": "ccc/re-zero-the-witness-lock-before-recomputing-the-sign-message",
+      "test": "tests/ccc/rezero-witness-before-verifying.test.mjs",
+      "library": "@ckb-ccc/core",
+      "covers": "all"
+    },
+    {
+      "lesson": "ccc/locate-the-signing-witness-slot-instead-of-hardcoding-its-in",
+      "test": "tests/ccc/signing-witness-position.test.mjs",
+      "library": "@ckb-ccc/core",
+      "covers": "part: where CCC puts the witness, not the advice for wallets and mocks"
+    },
+    {
+      "lesson": "ccc/reserve-co-signer-witness-space-before-completefeeby-in-mult",
+      "test": "tests/ccc/cosigner-witness-before-fee.test.mjs",
+      "library": "@ckb-ccc/core",
+      "covers": "all"
+    },
+    {
+      "lesson": "ccc/ccc-custom-client-scripts-must-include-anyonecanpay-for-sign",
+      "test": "tests/ccc/custom-scripts-need-anyone-can-pay.test.mjs",
+      "library": "@ckb-ccc/core",
+      "covers": "all"
+    }
+  ]
 }
