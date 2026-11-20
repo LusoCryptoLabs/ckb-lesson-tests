@@ -1,0 +1,20 @@
+name: latest
+# The same tests against the newest release of each library. A red run means a lesson may be out of date.
+on:
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm install --no-save @ckb-ccc/core@latest
+      - run: npm ls @ckb-ccc/core
+      - run: npm test
