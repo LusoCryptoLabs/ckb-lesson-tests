@@ -16,5 +16,6 @@ jobs:
           node-version: 22
       - run: npm ci
       - run: npm install --no-save @ckb-ccc/core@latest
-      - run: npm ls @ckb-ccc/core
+      # npm ls exits 1 once latest differs from the pinned version, so print the version instead.
+      - run: node -p "'@ckb-ccc/core ' + require('@ckb-ccc/core/package.json').version"
       - run: npm test
